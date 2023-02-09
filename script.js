@@ -4,18 +4,18 @@
 
 //------Read data
 
-// fetch("https://jsonplaceholder.typicode.com/users")
-//     .then((response) => {
-//         return response.json()
-//     })
-//     //can write single line code
-//     .then((data) => console.log(data))
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response.json()
+    })
+    //can write single line code
+    .then((data) => console.log(data))
 
-//     .catch((error) => {
-//         console.log(error)
+    .catch((error) => {
+        console.log(error)
 
-//         // document.write("can't Fetch data");
-//     });
+        // document.write("can't Fetch data");
+    });
 
 
 //-------print data on document
@@ -82,17 +82,17 @@
 //short hand for form data
 
 
-document.getElementById("saveForm").addEventListener("click", function (e) {
-    e.preventDefault(); //for not refreshing the page after submitting the form.
+// document.getElementById("saveForm").addEventListener("click", function (e) {
+//     e.preventDefault(); //for not refreshing the page after submitting the form.
 
-    //use formData() method and chnage body value
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: new FormData(document.getElementById("myForm")),
-        headers: {
-            'Content-type': 'application/x-www-form-urlencoded',
-        },
-    })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-})
+//     //use formData() method and chnage body value
+//     fetch('https://jsonplaceholder.typicode.com/posts', {
+//         method: 'POST',
+//         body: new FormData(document.getElementById("myForm")),
+//         headers: {
+//             'Content-type': 'application/x-www-form-urlencoded',
+//         },
+//     })
+//         .then((response) => response.json())
+//         .then((json) => console.log(json));
+// })
